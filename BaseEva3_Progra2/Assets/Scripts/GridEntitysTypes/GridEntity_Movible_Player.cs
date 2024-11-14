@@ -36,10 +36,8 @@ public class GridEntity_Movible_Player : GridEntity_Movible
         gridManager.GetGridPiece(pos).OnEntityEnter(this);
     }
 
-    void MoveInputs()
+    protected virtual void MoveInputs()
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
         Vector2Int dir = Vector2Int.zero;
 
         if (Input.GetKey(KeyCode.W))
