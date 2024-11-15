@@ -26,7 +26,7 @@ public class GridEntity_Movible_Player : GridEntity_Movible
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            gridShooter.Shoot(gridPos);
+            gridShooter.Shoot(gridPos, Vector2Int.right);
         }
     }  
 

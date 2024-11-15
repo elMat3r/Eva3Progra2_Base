@@ -22,13 +22,13 @@ public class GridShooter : MonoBehaviour
             }
         }
     }
-    public void Shoot(Vector2Int userGridPos)
+    public void Shoot(Vector2Int userGridPos, Vector2Int dir)
     {
         if (isOnCooldown)
         {
             return;
         }
-        Vector2Int dir = new Vector2Int((int)transform.forward.x, (int)transform.forward.z);
+
         Vector2Int bulletPos = userGridPos + dir;
         if (gridManager.IsPosOnArray(bulletPos))
         {

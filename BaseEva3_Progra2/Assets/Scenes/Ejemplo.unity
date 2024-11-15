@@ -156,7 +156,7 @@ MonoBehaviour:
   - {fileID: 342625477250844931, guid: 9bff716e695893347add73579a58c012, type: 3}
   - {fileID: 1018440231605446837, guid: 5764f58d526081c45afb841fdfe7cd1f, type: 3}
   - {fileID: 1018440231605446837, guid: 4e2664141f252c7498208cffe2105c87, type: 3}
-  gridSize: {x: 16, y: 8}
+  gridSize: {x: 20, y: 10}
   parent: {fileID: 863806968}
   wallPref: {fileID: 1744140219005918704, guid: 16608fe5f0d1848429d3a15335775c49, type: 3}
   wallDestructiblePref: {fileID: 1744140219005918704, guid: 53914c0aa552e274b82143830c478cf5, type: 3}
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridManager: {fileID: 389208967}
   bullet: {fileID: 3891519670516867282, guid: 3e1b96573e6608242b69cb5da10e0246, type: 3}
-  cooldown: 1
+  cooldown: 0.6
   isOnCooldown: 0
 --- !u!1001 &6728607303571594888
 PrefabInstance:
@@ -528,11 +528,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1775633628656663952, guid: 4f121f641753924418c4d9295830857f, type: 3}
       propertyPath: gridPos.x
-      value: 7
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1775633628656663952, guid: 4f121f641753924418c4d9295830857f, type: 3}
       propertyPath: gridPos.y
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1775633628656663952, guid: 4f121f641753924418c4d9295830857f, type: 3}
       propertyPath: entityType
@@ -540,11 +540,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1775633628656663952, guid: 4f121f641753924418c4d9295830857f, type: 3}
       propertyPath: startPos.x
-      value: 7
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1775633628656663952, guid: 4f121f641753924418c4d9295830857f, type: 3}
       propertyPath: startPos.y
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1775633628656663952, guid: 4f121f641753924418c4d9295830857f, type: 3}
       propertyPath: gridManager
@@ -556,7 +556,7 @@ PrefabInstance:
       objectReference: {fileID: 8947433148617758602}
     - target: {fileID: 3275520996647114866, guid: 4f121f641753924418c4d9295830857f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3275520996647114866, guid: 4f121f641753924418c4d9295830857f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -564,7 +564,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3275520996647114866, guid: 4f121f641753924418c4d9295830857f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3275520996647114866, guid: 4f121f641753924418c4d9295830857f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -621,7 +621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridManager: {fileID: 389208967}
   bullet: {fileID: 3891519670516867282, guid: 3e1b96573e6608242b69cb5da10e0246, type: 3}
-  cooldown: 1
+  cooldown: 0.6
   isOnCooldown: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

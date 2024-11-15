@@ -41,7 +41,7 @@ public class GridEntity_Movible_Player2 : GridEntity_Movible_Player
 
         if (Input.GetKeyDown(KeyCode.RightControl))
         {
-            gridShooter.Shoot(gridPos);
+            gridShooter.Shoot(gridPos, Vector2Int.left);
         }
     }
 }
