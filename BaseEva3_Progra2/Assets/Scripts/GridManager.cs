@@ -5,6 +5,7 @@ using UnityEngine;
 public class GridManager : MonoBehaviour
 {
     //El arreglo requiere el mismo orden que el enum
+    public Texture2D map;
     public GameObject[] gridPiecesPrefabs;
     public Vector2Int gridSize;
     public Transform parent;
