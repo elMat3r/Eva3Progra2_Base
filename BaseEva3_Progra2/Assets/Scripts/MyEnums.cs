@@ -4,13 +4,15 @@ public enum GridPieceType
     Empty,
     Wall,
     DestructibleWall,
+    FloorPlayer1,
+    FloorPLayer2
 }
 
 public enum EntityType
 { 
     Player,
     Player2,
-    Bullet,
+    Bullet
 }
 //public enum GridPieceType
 //{

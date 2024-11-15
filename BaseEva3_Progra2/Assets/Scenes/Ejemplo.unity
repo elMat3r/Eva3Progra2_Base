@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eea88bab43cfb84f8d38608c8882450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  map: {fileID: 0}
   gridPiecesPrefabs:
   - {fileID: 342625477250844931, guid: 9bff716e695893347add73579a58c012, type: 3}
   - {fileID: 1018440231605446837, guid: 5764f58d526081c45afb841fdfe7cd1f, type: 3}
@@ -428,7 +429,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1090877558956790702, guid: 47ee65c3e8413194691fc07f46db9cff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: -11.27
       objectReference: {fileID: 0}
     - target: {fileID: 1090877558956790702, guid: 47ee65c3e8413194691fc07f46db9cff, type: 3}
       propertyPath: m_LocalPosition.y
@@ -556,7 +557,7 @@ PrefabInstance:
       objectReference: {fileID: 8947433148617758602}
     - target: {fileID: 3275520996647114866, guid: 4f121f641753924418c4d9295830857f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13
+      value: -13.64
       objectReference: {fileID: 0}
     - target: {fileID: 3275520996647114866, guid: 4f121f641753924418c4d9295830857f, type: 3}
       propertyPath: m_LocalPosition.y

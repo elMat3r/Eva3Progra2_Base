@@ -53,7 +53,14 @@ public class GridManager : MonoBehaviour
         GameObject pref = gridPiecesPrefabs[(int)pieceType];
 
         GameObject pieceObj = Instantiate(pref, position, Quaternion.identity,parent);
-        
+        //pieceObj.GetComponent<MeshRenderer>().material.color = Color.blue;
+     
+
+        if (gridPos.x >= 10)
+        {
+            pieceObj.GetComponent<MeshRenderer>().material.color = Color.blue;
+        }
+
         switch (pieceType)
         {
             case GridPieceType.Empty:
@@ -95,6 +102,10 @@ public class GridManager : MonoBehaviour
         {
             gridPieceType = GridPieceType.DestructibleWall;
         }
+        //else if (pos.x == 2 || pos.x == gridSize.x - 3 || pos.y == 2 || pos.y == gridSize.y - 3)
+        //{
+        //    gridPieceType = GridPieceType.FloorPlayer1;
+        //}
         return gridPieceType;
     }
 
