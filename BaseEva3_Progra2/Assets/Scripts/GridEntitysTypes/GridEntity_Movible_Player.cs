@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GridEntity_Movible_Player : GridEntity_Movible
 {
+    public Image image;
     public GridShooter gridShooter;
     public Vector2Int startPos;
 
@@ -74,4 +77,30 @@ public class GridEntity_Movible_Player : GridEntity_Movible
     {
         print("PlayerDead");
     }
+
+    public override void Move(Vector2Int dir)
+    {
+        if (isMoving) return;
+        Vector2Int newPos = gridPos + dir;
+        if (gridManager.IsPosOnArray(newPos))
+        {
+            if (gridManager.IsPieceWalkablePlayer1(newPos))
+            {
+                isMoving = true;
+                StartCoroutine(MoveCoroutine(newPos));
+            }
+        }
+    }
+
+    public override void TakeDamage(float dmg)
+    {
+        base.TakeDamage(dmg);
+        //image.fillAmount = currentLife / life;
+        if(currentLife == 0)
+        {
+            SceneManager.LoadScene("04 EndBattle_Player2");
+        }
+    }
+
+
 }

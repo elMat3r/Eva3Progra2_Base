@@ -6,6 +6,8 @@ public class GridEntity_Movible_Bullet : GridEntity_Movible
 {
     public Vector2Int bulletDir;
     public float dmg;
+    bool lePegueAlcohino;
+    GridEntity cochinoGolpeado;
 
     protected override void Awake2()
     {
@@ -51,13 +53,21 @@ public class GridEntity_Movible_Bullet : GridEntity_Movible
         {
             OnWallImpact(gridPiece);
         }
+        if(lePegueAlcohino)
+        {
+            gridPiece.isEmpty = false;
+            gridPiece.currentGridEntity = cochinoGolpeado;
+        }
     }
 
     public override void InteractWhitOtherEntity(GridEntity other)
     {
-        if(other.entityType == EntityType.Player)
+        if(other.entityType == EntityType.Player || other.entityType == EntityType.Player2)
         {
             other.TakeDamage(dmg);
+            lePegueAlcohino = true;
+            cochinoGolpeado = other;
+            Die();
         }
     }
 

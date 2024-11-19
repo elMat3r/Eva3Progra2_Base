@@ -7,10 +7,11 @@ public abstract class GridPiece : MonoBehaviour
     [SerializeField] protected MeshRenderer mesh;
     public Vector2Int pos;
     public bool isWalkable;
+    public bool isWalkableP2;
     public bool isEmpty;
     public GridPieceType pieceType;
     protected Color defaultColor;
-    protected GridEntity currentGridEntity;
+    public GridEntity currentGridEntity;
 
     //Se encarga de cambiar el color de la pieza
     public void ChangeColor(Color color, bool isDefaultColor)

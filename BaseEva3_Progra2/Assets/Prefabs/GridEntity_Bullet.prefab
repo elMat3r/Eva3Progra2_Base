@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8957543956137483370}
   - component: {fileID: 3891519670516867282}
+  - component: {fileID: 4552706620659923616}
   m_Layer: 0
   m_Name: GridEntity_Bullet
   m_TagString: Untagged
@@ -45,15 +46,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e267cf78f65784399455d28612371f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityType: 1
+  entityType: 2
   gridPos: {x: 0, y: 0}
   isTrigger: 1
+  life: 0
+  currentLife: 0
   gridManager: {fileID: 0}
   spd: 8
   yPos: 0
   isMoving: 0
   bulletDir: {x: 0, y: 0}
   dmg: 5
+--- !u!114 &4552706620659923616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273879840746121749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc63666ca65ddd3499bfe0d2080e194c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 0}
+  pos: {x: 0, y: 0}
+  isWalkable: 0
+  isWalkableP2: 0
+  isEmpty: 0
+  pieceType: 0
 --- !u!1 &3270521609239430425
 GameObject:
   m_ObjectHideFlags: 0

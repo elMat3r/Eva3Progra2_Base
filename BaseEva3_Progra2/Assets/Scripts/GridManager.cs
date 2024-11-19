@@ -56,10 +56,7 @@ public class GridManager : MonoBehaviour
         //pieceObj.GetComponent<MeshRenderer>().material.color = Color.blue;
      
 
-        if (gridPos.x >= 10)
-        {
-            pieceObj.GetComponent<MeshRenderer>().material.color = Color.blue;
-        }
+
 
         switch (pieceType)
         {
@@ -81,10 +78,15 @@ public class GridManager : MonoBehaviour
                 GridPiece_Wall gridPiece_WallDestructible = pieceObj.GetComponent<GridPiece_Wall>();
                 gridPiece_WallDestructible.isWalkable = false;
                 gridPiece_WallDestructible.isEmpty = false;
-                gridPiece_WallDestructible.isDestructible = true;
+                gridPiece_WallDestructible.isDestructible = false;
                 gridPiece_WallDestructible.CreateWall(wallDestructiblePref);
                 piece = gridPiece_WallDestructible;
                 break;
+        }
+
+        if (gridPos.x >= 10)
+        {
+            piece.ChangeColor(Color.blue, true);
         }
 
         return piece;   
@@ -112,6 +114,16 @@ public class GridManager : MonoBehaviour
     public bool IsPieceWalkable(Vector2Int piecePos)
     {
         return grid[piecePos.x, piecePos.y].isWalkable;
+    }
+
+    public bool IsPieceWalkablePlayer2(Vector2Int piecePos)
+    {
+        return piecePos.x >= 10 && IsPieceWalkable(piecePos);
+    }
+
+    public bool IsPieceWalkablePlayer1(Vector2Int piecePos)
+    {
+        return piecePos.x < 10 && IsPieceWalkable(piecePos);
     }
 
     public GridPiece GetGridPiece(Vector2Int piecePos)

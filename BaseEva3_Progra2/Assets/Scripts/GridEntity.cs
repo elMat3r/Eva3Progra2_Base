@@ -7,8 +7,8 @@ public abstract class GridEntity : MonoBehaviour
     public EntityType entityType;
     public Vector2Int gridPos;
     public bool isTrigger;
-    public float life;
-    public float currentLife;
+    public float life = 10;
+    public float currentLife = 10;
 
     private void Awake()
     {
@@ -18,8 +18,18 @@ public abstract class GridEntity : MonoBehaviour
 
     protected abstract void Awake2();
 
+    //public virtual void TakeDamage(float dmg)
+    //{
+    //    currentLife -= dmg;
+    //    if (life <= 0)
+    //    {
+    //        Die();
+    //    }
+    //}
+
     public virtual void TakeDamage(float dmg)
     {
+        dmg = 1;
         currentLife -= dmg;
         if (life <= 0)
         {
